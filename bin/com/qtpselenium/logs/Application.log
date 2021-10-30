@@ -1,0 +1,21 @@
+29/10/2021 19:47:29 devpinoyLogger Start Logs
+29/10/2021 19:47:29 devpinoyLogger Initialize Suite Xlsx
+29/10/2021 19:47:29 devpinoyLogger Initializing object data keywords starting loading browser
+29/10/2021 19:47:29 devpinoyLogger Check Items
+29/10/2021 19:47:29 devpinoyLogger N
+29/10/2021 19:47:29 devpinoyLogger Search Suite
+29/10/2021 19:47:29 devpinoyLogger N
+29/10/2021 19:47:29 devpinoyLogger C Suite
+29/10/2021 19:47:29 devpinoyLogger Y
+29/10/2021 19:47:29 devpinoyLogger Execute test Suite
+
+29/10/2021 19:47:29 devpinoyLogger Current Suite is : C Suite.xlsx*******************************Current Suite
+29/10/2021 19:47:29 devpinoyLogger current test case is :SampleTest---------------------Current Test Case
+29/10/2021 19:47:29 devpinoyLogger openBrowser
+29/10/2021 19:47:33 devpinoyLogger PASS
+29/10/2021 19:47:33 devpinoyLogger navigate
+29/10/2021 19:47:33 devpinoyLogger Navigate to URL
+29/10/2021 19:47:42 devpinoyLogger PASS
+29/10/2021 19:47:42 devpinoyLogger clickLink
+29/10/2021 19:47:42 devpinoyLogger Click Link
+29/10/2021 19:47:42 devpinoyLogger PASS
