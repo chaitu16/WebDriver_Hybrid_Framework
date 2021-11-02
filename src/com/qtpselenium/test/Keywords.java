@@ -3,12 +3,18 @@ package com.qtpselenium.test;
 import static com.qtpselenium.test.DriverScript.APP_LOGS;
 import static com.qtpselenium.test.DriverScript.config;
 import static com.qtpselenium.test.DriverScript.or;
+import static com.qtpselenium.test.DriverScript.currentXLS;
+import static com.qtpselenium.test.DriverScript.currentTestDataSetID;
+import static com.qtpselenium.test.DriverScript.currentTestcaseName;
+import static com.qtpselenium.test.DriverScript.currentTestcaseID;
+
 
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -30,7 +36,7 @@ public class Keywords {
 		
 		
 		
-		if(config.getProperty("browserType").equals("Chrome")) {
+		if(config.getProperty(data).equals("Chrome")) {
 			ChromeOptions crops = new ChromeOptions();
 			//crops.setPageLoadStrategy(PageLoadStrategy.EAGER);
 			crops.addArguments("--disable-notifications");
@@ -128,12 +134,28 @@ public class Keywords {
 		return Constants.KEYWORD_PASS;
 	}
 	
-	public String verifyLinkText() {
+	public String verifyLinkText(String object, String data) {	
+		
 		APP_LOGS.debug("LinkText Verification");
-		return Constants.KEYWORD_PASS;
+		String actual = driver.findElement(By.xpath(or.getProperty(object))).getText();
+		System.out.println(actual);
+		String expected = or.getProperty(data);
+		try {
+		
+		if(expected.equals(actual)) {
+			return Constants.KEYWORD_PASS + actual;
+		}else {
+			return Constants.KEYWORD_FAIL + "expected :" + expected + "But actual is : "+actual;
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
+			return Constants.KEYWORD_FAIL + "expected :" + expected + "But actual is : "+actual;
+		}
 		
 	}
-	public String verifyText() {
+	public String verifyText(String object, String data) {
+		
+		
 		
 		APP_LOGS.debug("Verifying Text Method");
 		
@@ -230,10 +252,39 @@ public class Keywords {
 		return Constants.KEYWORD_PASS;
 	}
 	
+	public void closeBrowser(String object, String data) throws InterruptedException {
+		driverWait();
+		driver.quit();
+	}
+	
+	
 	public void driverWait() throws InterruptedException {
 		synchronized (driver){
 			driver.wait(5000);			
 		}
+	}
+	
+/* *********************************************Application Specific kEYWORDS ***************************************************************************/	
+	
+public String verifyLogin(String object,String data) {
+		
+		APP_LOGS.debug("Verify Login Process");
+		String actual = driver.findElement(By.xpath(or.getProperty(object))).getText();
+		String expected = or.getProperty(data);
+		
+		
+		if(!actual.equals(expected)) {
+			return Constants.KEYWORD_FAIL;
+			
+		}else if (actual.equals(expected)) {
+			return Constants.KEYWORD_PASS;
+			
+			}
+		
+		
+		return Constants.KEYWORD_PASS;
+		
+					
 	}
 
 	

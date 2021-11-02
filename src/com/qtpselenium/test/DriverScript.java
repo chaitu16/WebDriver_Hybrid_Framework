@@ -22,19 +22,19 @@ public class DriverScript {
 	
 	public static Logger APP_LOGS;
 	
-	public String current_Suite_Xls;
-	public Excel_Reader currentXLS;
-	public int currentTCID;
-	public String currentTestcaseName;
-	public int currentTestcaseID;
-	public String currentKeyword;
-	public Keywords keywords;
-	public Method method[];
-	public String keyword_execution_result;
-	public ArrayList<String> resultSet;
-	public int currentTestDataSetID;
-	public String data;
-	public String object;
+	public static  String current_Suite_Xls;
+	public static Excel_Reader currentXLS;
+	public static int currentTCID;
+	public static String currentTestcaseName;
+	public static int currentTestcaseID;
+	public static String currentKeyword;
+	public static Keywords keywords;
+	public static Method method[];
+	public static String keyword_execution_result;
+	public static ArrayList<String> resultSet;
+	public static int currentTestDataSetID;
+	public static String data;
+	public static String object;
 	
 	public static Properties config;
 	public static Properties or;
@@ -137,7 +137,13 @@ public class DriverScript {
 			data = currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.DATA, currentTestcaseID);
 			if(data.startsWith(Constants.DATA_Start_Col)) {
 				data = currentXLS.getCellData(currentTestcaseName, data.split(Constants.DATA_Split)[1], currentTestDataSetID);
-			}
+			}else if(data.startsWith(Constants.config)){
+                //read actual data value from config.properties
+                data=config.getProperty(data.split(Constants.DATA_Split)[1]);
+            }else{
+                //by default read actual data value from or.properties
+                data=or.getProperty(data);
+            }
 			
 			
 			object = currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.OBJECT, currentTestcaseID);
@@ -198,7 +204,7 @@ public class DriverScript {
 	            for(int i=0;i<resultSet.size();i++){
 	                if(!resultSet.get(i).equals(Constants.KEYWORD_PASS)){
 	                //	currentXLS.setCellData(currentTestcaseName, Constants.RESULT, currentTCID, resultSet.get(i));
-	                	currentXLS.setCellData(currentTestcaseName, Constants.RESULT, currentTestDataSetID,Constants.KEYWORD_FAIL);
+	                	currentXLS.setCellData(currentTestcaseName, Constants.RESULT, currentTestDataSetID,resultSet.get(i));
 	                    return;
 	                }
 	            }

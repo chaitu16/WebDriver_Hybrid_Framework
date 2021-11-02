@@ -1,21 +1,33 @@
-29/10/2021 19:47:29 devpinoyLogger Start Logs
-29/10/2021 19:47:29 devpinoyLogger Initialize Suite Xlsx
-29/10/2021 19:47:29 devpinoyLogger Initializing object data keywords starting loading browser
-29/10/2021 19:47:29 devpinoyLogger Check Items
-29/10/2021 19:47:29 devpinoyLogger N
-29/10/2021 19:47:29 devpinoyLogger Search Suite
-29/10/2021 19:47:29 devpinoyLogger N
-29/10/2021 19:47:29 devpinoyLogger C Suite
-29/10/2021 19:47:29 devpinoyLogger Y
-29/10/2021 19:47:29 devpinoyLogger Execute test Suite
+30/10/2021 13:00:30 devpinoyLogger Start Logs
+30/10/2021 13:00:30 devpinoyLogger Initialize Suite Xlsx
+30/10/2021 13:00:30 devpinoyLogger Initializing object data keywords starting loading browser
+30/10/2021 13:00:31 devpinoyLogger Check Items
+30/10/2021 13:00:31 devpinoyLogger N
+30/10/2021 13:00:31 devpinoyLogger Search Suite
+30/10/2021 13:00:31 devpinoyLogger N
+30/10/2021 13:00:31 devpinoyLogger C Suite
+30/10/2021 13:00:31 devpinoyLogger Y
+30/10/2021 13:00:31 devpinoyLogger Execute test Suite
 
-29/10/2021 19:47:29 devpinoyLogger Current Suite is : C Suite.xlsx*******************************Current Suite
-29/10/2021 19:47:29 devpinoyLogger current test case is :SampleTest---------------------Current Test Case
-29/10/2021 19:47:29 devpinoyLogger openBrowser
-29/10/2021 19:47:33 devpinoyLogger PASS
-29/10/2021 19:47:33 devpinoyLogger navigate
-29/10/2021 19:47:33 devpinoyLogger Navigate to URL
-29/10/2021 19:47:42 devpinoyLogger PASS
-29/10/2021 19:47:42 devpinoyLogger clickLink
-29/10/2021 19:47:42 devpinoyLogger Click Link
-29/10/2021 19:47:42 devpinoyLogger PASS
+30/10/2021 13:00:31 devpinoyLogger Current Suite is : C Suite.xlsx*******************************Current Suite
+30/10/2021 13:00:31 devpinoyLogger current test case is :SampleTest---------------------Current Test Case
+30/10/2021 13:00:31 devpinoyLogger openBrowser
+30/10/2021 13:00:35 devpinoyLogger PASS
+30/10/2021 13:00:35 devpinoyLogger navigate
+30/10/2021 13:00:35 devpinoyLogger Navigate to URL
+30/10/2021 13:01:15 devpinoyLogger PASS
+30/10/2021 13:01:15 devpinoyLogger clickButton
+30/10/2021 13:01:15 devpinoyLogger Click Button
+30/10/2021 13:01:21 devpinoyLogger PASS
+30/10/2021 13:01:21 devpinoyLogger clickLink
+30/10/2021 13:01:21 devpinoyLogger Click Link
+30/10/2021 13:01:21 devpinoyLogger PASS
+30/10/2021 13:01:21 devpinoyLogger writeInInput
+30/10/2021 13:01:21 devpinoyLogger Send keys 
+30/10/2021 13:01:21 devpinoyLogger PASS
+30/10/2021 13:01:21 devpinoyLogger writeInInput
+30/10/2021 13:01:21 devpinoyLogger Send keys 
+30/10/2021 13:01:21 devpinoyLogger PASS
+30/10/2021 13:01:21 devpinoyLogger verifyLinkText
+30/10/2021 13:01:21 devpinoyLogger LinkText Verification
+30/10/2021 13:01:21 devpinoyLogger PASSNew to Flipkart? Create an account

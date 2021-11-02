@@ -19,6 +19,8 @@ public class Constants {
 	public static String OBJECT = "Object";
 	public static String DATA_Start_Col="col";
 	public static String DATA_Split="\\|";
+	public static String config= "config";
+	
 	
 	
 	
